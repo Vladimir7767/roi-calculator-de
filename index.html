@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kostenloser ROI-Rechner online — Kapitalrendite berechnen</title>
+<meta name="description" content="Kostenloser Online-ROI-Rechner. Berechnen Sie die Kapitalrendite und die Rentabilität Ihrer Marketing- und Werbekampagnen sofort mit 1 Klick.">
+<style>
+body{font-family:'Segoe UI',sans-serif;background:#f4f6f9;margin:0;padding:20px;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.box{background:#fff;padding:25px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.05);max-width:440px;width:100%;text-align:center}
+h2{text-align:center;margin-top:0;color:#1e293b}
+.form-group{margin-bottom:12px;text-align:left}
+label{display:block;margin-bottom:4px;font-weight:600;color:#475569;font-size:13px}
+input{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:6px;box-sizing:border-box;font-size:14px;color:#334155}
+button{width:100%;padding:12px;background:#0284c7;border:none;color:#fff;font-weight:bold;border-radius:6px;cursor:pointer;margin-top:10px}
+button:hover{background:#0369a1}
+.res{margin-top:15px;padding:15px;display:none;background:#f0f9ff;border:1px solid #bae6fd;border-radius:6px;text-align:left;font-size:14px;line-height:1.5}
+.ad{display:none;margin-top:15px;min-height:100px;text-align:center}
+.faq{margin-top:20px;border-top:1px solid #e2e8f0;padding-top:15px;font-size:12px;color:#64748b;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>ROI-Rechner</h2>
+<div class="form-group">
+<label>Gesamte Investitionskosten (€ oder $):</label>
+<input type="number" id="cost" placeholder="Z.B. 5000" required>
+</div>
+<div class="form-group">
+<label>Erzielter Gesamtumsatz (€ oder $):</label>
+<input type="number" id="revenue" placeholder="Z.B. 15000" required>
+</div>
+<button onclick="calcROI()">ROI berechnen</button>
+<div id="resBox" class="res"></div>
+<div id="ads" class="ad"><div id="container-e8c895e6c70ade8e4ef4a72354f42e97"></div></div>
+<div class="faq">
+<h3>Was ist der ROI und wie wird er interpretiert?</h3>
+<p>Der ROI (Return on Investment) misst die Rentabilität einer finanziellen Investition. Ein ROI von 100% bedeutet, dass Sie das investierte Geld verdoppelt haben. Ein negativer Prozentsatz weist auf Verluste hin.</p>
+</div>
+</div>
+<script>
+function showAds(){
+const c=document.getElementById('ads');
+if(!window.adScriptLoaded){
+window.atOptions={'key':'e8c895e6c70ade8e4ef4a72354f42e97','format':'iframe','height':90,'width':728,'params':{}};
+var s=document.createElement('script');s.type='text/javascript';s.async=!0;
+s.src=['https://','bagelstoppage.','com/','e8c895e6c70ade8e4ef4a72354f42e97/','invoke.js'].join('');c.appendChild(s);window.adScriptLoaded=!0
+}c.style.display='block'
+}
+function calcROI(){
+const investment=parseFloat(document.getElementById('cost').value);
+const revenue=parseFloat(document.getElementById('revenue').value);
+const box=document.getElementById('resBox');
+if(isNaN(investment)||isNaN(revenue)){alert('Bitte füllen Sie alle Felder aus.');return}
+if(investment===0){alert('Die Investitionskosten können nicht Null sein.');return}
+const profit=revenue-investment;
+const roi=((profit/investment)*100).toFixed(1);
+const isProfit=parseFloat(roi)>=0;
+box.innerHTML='<strong>Nettogewinn:</strong> '+profit.toFixed(2)+'<br><strong>Kapitalrendite (ROI):</strong> <span style="font-weight:bold;color:'+(isProfit?'#16a34a':'#dc2626')+'">'+roi+'%</span>';
+box.style.display='block';
+showAds()
+}
+</script>
+<div style="display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;position:absolute!important;top:-9999px!important;">
+<h2>Wie berechnet man den Return on Investment online — ROI Formel kostenlos</h2>
+<p>Messen Sie die Einnahmen und die Rentabilität Ihrer Werbeanzeigen mit unserem Finanzrechner. Berechnen Sie sofort den Nettogewinn im Online-Marketing.</p>
+<ul>
+<li>roi rechner kostenlos online deutsch</li>
+<li>return on investment berechnen formel</li>
+<li>kapitalrendite online berechnen marketing</li>
+</ul>
+</div>
+</body>
+</html>
